@@ -2,7 +2,7 @@ using System;
 
 namespace Domain
 {
-    public class Activity
+    public class Activity // domain has no access to rest of project
     {
         public Guid Id { get; set; } // dont have to wait for db to generate id, done thru UI
         public string Title { get; set; }

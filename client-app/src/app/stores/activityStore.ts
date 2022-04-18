@@ -37,7 +37,9 @@ export default class ActivityStore {
 
   loadActivity = async (id: string) => {
     let activity = this.getActivity(id);
+    console.log('act', activity);
     if(activity){
+      console.log('in if');
       this.selectedActivity = activity;
       return activity;
     }
@@ -65,6 +67,7 @@ export default class ActivityStore {
   }
 
   private getActivity = (id: string) => {
+    console.log(this.activityRegistry);
     return this.activityRegistry.get(id);
   }
 
